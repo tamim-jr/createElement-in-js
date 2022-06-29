@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+
+<body>
+    <h2>This is h2 tag</h2>
+    <p>This is paragraph</p>
+    <ul id="main">
+        <li>First li</li>
+        <li>Second li</li>
+        <li>Third li</li>
+    </ul>
+    <ul id="newlist1">
+        <li>All new list -1</li>
+        <li>All new list -2</li>
+        <li>All new list -3</li>
+    </ul>
+
+    <script>
+        const parent = document.getElementById("main");
+        const child = document.createElement("li");
+        child.innerHTML = "Brand new li";
+        parent.appendChild(child);
+    </script>
+
+    <script>
+        // Create element:
+        const para = document.createElement("p");
+        para.innerText = "This is a paragraph.";
+
+        // Append to body:
+        document.body.appendChild(para);
+    </script>
+
+    <script>
+        const newli = document.getElementById("newlist1");
+        const newchild = document.createElement("li");
+        newchild.innerHTML = "This is the new listing";
+        newli.appendChild(newchild);
+    </script>
+</body>
+
+</html>
